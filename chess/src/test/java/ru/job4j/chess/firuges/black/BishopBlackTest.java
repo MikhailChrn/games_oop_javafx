@@ -60,7 +60,8 @@ class BishopBlackTest {
     void wayH8toA1() {
         Cell respawn = Cell.H8;
         Cell destination = Cell.A1;
-        Cell[] expected = new Cell[] {Cell.G7, Cell.F6, Cell.E5, Cell.D4, Cell.C3, Cell.B2, Cell.A1};
+        Cell[] expected = new Cell[] {Cell.G7, Cell.F6, Cell.E5,
+                                        Cell.D4, Cell.C3, Cell.B2, Cell.A1};
         Figure bishopBlack = new BishopBlack(respawn);
         Cell[] result = bishopBlack.way(destination);
         assertThat(result).containsExactly(expected);
