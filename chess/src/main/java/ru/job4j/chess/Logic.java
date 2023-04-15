@@ -24,10 +24,7 @@ public final class Logic {
     private boolean free(Cell[] steps) throws OccupiedCellException {
         for (Figure figure : figures) {
             for (Cell cell : steps) {
-                if (figure == null) {
-                    break;
-                }
-                if (cell.equals(figure.position())) {
+                if (figure != null && cell.equals(figure.position())) {
                     throw new OccupiedCellException("Невозможный ход.");
                 }
             }
